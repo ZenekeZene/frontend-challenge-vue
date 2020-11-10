@@ -1,0 +1,18 @@
+.button {
+  color: var(--color-secondary);
+
+  &:hover {
+    color: white;
+    background-color: var(--color-tertiary);
+  }
+
+  &.--primary {
+    color: white;
+    background-color: var(--color-secondary);
+  
+    &:hover {
+      color: white;
+      background-color: var(--color-primary);
+    }
+  }
+}

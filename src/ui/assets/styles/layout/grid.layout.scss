@@ -1,0 +1,7 @@
+.l-grid-2columns {
+  @include grid;
+}
+
+.l-grid-3columns {
+  @include grid($minSize: 7rem);
+}

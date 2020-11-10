@@ -1,0 +1,18 @@
+@mixin size($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@function unit($unitKey) {
+  @if (map_get($units, $unitKey)) {
+    @return map_get($units, $unitKey) * 1rem;
+  } @else {
+    @error '#{$unit} unit not found.';
+  }
+}

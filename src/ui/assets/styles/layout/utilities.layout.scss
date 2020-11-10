@@ -1,0 +1,6 @@
+@mixin grid($minSize: 8rem, $grid-gap: $gutter) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($minSize, 1fr));
+  grid-gap: $grid-gap;
+  grid-auto-rows: auto;
+}

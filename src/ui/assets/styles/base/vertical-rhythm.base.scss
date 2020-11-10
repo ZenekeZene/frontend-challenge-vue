@@ -1,0 +1,9 @@
+p,
+button,
+input {
+  margin-bottom: $gutter;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

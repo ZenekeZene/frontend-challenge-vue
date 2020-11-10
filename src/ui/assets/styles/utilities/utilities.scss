@@ -1,0 +1,41 @@
+$properties: (
+  m: 'margin',
+  p: 'padding',
+);
+
+$offsets: (
+  t: 'top',
+  r: 'right',
+  b: 'bottom',
+  l: 'left',
+);
+
+@each $property-key, $property-value in $properties {
+  @each $offset-key, $offset-value in $offsets {
+    @each $units-key, $units-value in $units {
+      .#{$property-key}#{$offset-key}-#{$units-key} {
+        #{$property-value}-#{$offset-value}: $units-value * 1rem;
+      }
+
+      .#{$property-key}a-#{$units-key} {
+        #{$property-value}: $units-value * 1rem;
+      }
+    }
+  }
+}
+
+.text-bold {
+  font-weight: 900;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.rounded {
+  border-radius: 50%;
+}
+
+.full-width {
+  width: 100%;
+}
