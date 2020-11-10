@@ -1,5 +1,5 @@
-import { shallowMount, createLocalVue, mount } from '@vue/test-utils'
-import {render, screen, fireEvent, waitFor} from '@testing-library/vue'
+import { createLocalVue, mount } from '@vue/test-utils'
+import {render, waitFor} from '@testing-library/vue'
 import Vuex from 'vuex'
 import Home from '@/ui/views/Home.vue'
 import CategoryFeed from '@/ui/components/category/CategoryFeed.vue'

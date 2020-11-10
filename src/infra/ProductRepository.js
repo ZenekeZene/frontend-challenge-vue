@@ -9,7 +9,7 @@ const rootPath = 'products'
 
 async function getAll() {
   try {
-    const response = await api.get(`http://localhost:3001/${rootPath}`)
+    const response = await api.get(`/${rootPath}`)
     return model(response.data)
   } catch (err) {
     console.error(err)
@@ -20,7 +20,7 @@ async function getAll() {
 async function getByCategory({ categoryKey }) {
   if (!categoryKey) throw new Error('getByCategory needs a categoryKey as parameter.')
   try {
-    const response = await api.get(`http://localhost:3001/${rootPath}?category=${categoryKey}`)
+    const response = await api.get(`/${rootPath}?category=${categoryKey}`)
     return model(response.data)
   } catch (err) {
     console.error(err)
@@ -31,7 +31,7 @@ async function getByCategory({ categoryKey }) {
 async function getById({ id }) {
   if (!id) throw new Error('getById needs a id as parameter.')
   try {
-    const response = await api.get(`http://localhost:3001/${rootPath}?id=${id}`)
+    const response = await api.get(`/${rootPath}?id=${id}`)
     return createProduct(response.data)
   } catch (err) {
     console.error(err)

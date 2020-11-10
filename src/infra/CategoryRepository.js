@@ -7,7 +7,7 @@ function modelCategories(data = []) {
 
 async function getAll() {
   try {
-    const response = await api.get('http://localhost:3001/categories')
+    const response = await api.get('/categories')
     return modelCategories(response.data);
   } catch (err) {
     console.error(err)
